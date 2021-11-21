@@ -12,7 +12,7 @@ import tkinter.messagebox
 
 # create a tkinter root window
 
-
+os.system('pip install -r requirements.txt')
 
 
 # Initializing the wmi constructor
