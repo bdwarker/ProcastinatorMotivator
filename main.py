@@ -1,4 +1,6 @@
 # Import module
+import os
+os.system('pip install -r requirements.txt')
 import wmi
 import json
 import requests
@@ -12,7 +14,7 @@ import tkinter.messagebox
 
 # create a tkinter root window
 
-os.system('pip install -r requirements.txt')
+
 
 
 # Initializing the wmi constructor
