@@ -1,6 +1,6 @@
 # Import module
 import os
-os.system('pip install -r requirements.txt')
+os.system('pip install wmi requests')
 import wmi
 import json
 import requests
