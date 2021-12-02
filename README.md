@@ -1,5 +1,5 @@
 # ProcastinatorMotivator
-
+![alt text](http://url/to/img.png)
 ## What is it:
 It is a program that will help you not procrastinate and will motivate you when you open a distracting app.
 
