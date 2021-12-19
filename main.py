@@ -5,12 +5,16 @@ import wmi
 import json
 import requests
 import os.path
+import getpass
 
 # import everything from tkinter module
 from tkinter import *
 
 # import messagebox from tkinter module
 import tkinter.messagebox
+import shutil
+
+
 
 #creating tkinter root window
 # Initializing the wmi constructor
@@ -41,10 +45,14 @@ def run():
                 break
 
         if flag == 0:
-            print("Application is not Running")
+            return
         root.destroy()
         root.mainloop()
- 
+def createStartup():
+    user=getpass.getuser()
+    original = 'ProcastinatorMotivator.exe'
+    target = "C:/Users/"+ user + "/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/"+original
+    shutil.copyfile(original, target)
 def open_file():
     program_name=program_var.get()
     with open("program.name", "w") as file:
@@ -63,6 +71,7 @@ else:
     program_instruction=Label(win_startup, text="Name of the program that you'd like to block:").grid(row=0, column=0)
     program = Entry(win_startup,textvariable=program_var).grid(row=0, column=1)
     sub_btn=Button(win_startup, text='Go!', command=open_file).grid(row = 4, column = 0)
+    startup_btn=Button(win_startup, text='Add to Startup', command=createStartup).grid(row = 4, column = 1)
     win_startup.mainloop()
 
 
