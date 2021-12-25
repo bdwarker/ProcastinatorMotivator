@@ -39,13 +39,15 @@ def run():
         # Iterating through all the running processes
         for process in f.Win32_Process():
             if program_read == process.Name:
+                print("Running")
                 tkinter.messagebox.showinfo("ProcrastinatorMotivator",
                                             f"While you are procastinating someone else is working hard to obtain your postion. {get_Quote()}")
                 flag = 1
                 break
 
         if flag == 0:
-            return
+            print("NO")
+            run()
         root.destroy()
         root.mainloop()
 def createStartup():
