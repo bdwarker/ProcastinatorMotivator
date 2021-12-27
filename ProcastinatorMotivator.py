@@ -45,8 +45,7 @@ def run():
             return (quote)
         # Check if any chrome process was running or not.
         if checkIfProcessRunning(program_read):
-            tkinter.messagebox.showinfo("ProcrastinatorMotivator",
-                                            f"While you are procastinating someone else is working hard to obtain your postion. {get_Quote()}")
+            tkinter.messagebox.showinfo("ProcrastinatorMotivator", "While you are procastinating someone else is working hard to obtain your postion. " + get_Quote())
 
         else:
             print('')
