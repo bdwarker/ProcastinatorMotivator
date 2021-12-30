@@ -12,13 +12,9 @@ from tkinter import *
 # import messagebox from tkinter module
 import tkinter.messagebox
 import shutil
-# creating tkinter root window
-# Initializing the wmi constructor
 def checkIfProcessRunning(processName):
-    '''
-    Check if there is any running process that contains the given name processName.
-    '''
-    #Iterate over the all the running process
+    # Check if there is any running process that contains the given name processName.
+    # Iterate over the all the running process
     for proc in psutil.process_iter():
         try:
             # Check if process name contains the given name string.
@@ -43,7 +39,7 @@ def run():
             json_data = json.loads(response.text)
             quote = json_data[0]['q'] + " -" + json_data[0]['a']
             return (quote)
-        # Check if any chrome process was running or not.
+        # Check if any process was running or not.
         if checkIfProcessRunning(program_read):
             tkinter.messagebox.showinfo("ProcrastinatorMotivator", "While you are procastinating someone else is working hard to obtain your postion. " + get_Quote())
 
