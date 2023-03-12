@@ -1,5 +1,4 @@
 # ProcastinatorMotivator
-![alt text](https://github.com/Unerasable/ProcastinatorMotivator/blob/main/Images/cover.png)
 ## What is it:
 It is a program that will help you not procrastinate and will motivate you when you open a distracting app.
 
